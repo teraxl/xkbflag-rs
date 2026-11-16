@@ -1,5 +1,5 @@
 [package]
-name = "xkbflag"
+name = "xkbflag-rs"
 version = "0.1.0"
 edition = "2021"
 description = "Плавающий флаг раскладки клавиатуры у курсора (KDE/X11)"
