@@ -1,0 +1,12 @@
+Package: xkbflag-rs
+Version: {{version}}
+Section: utils
+Priority: optional
+Installed-Size: 12000
+Architecture: {{arch}}
+Depends: libc6 (>= 2.31), libx11-6, libxcb1, libxext6, libxtst6, libdbus-1-3
+Maintainer: Aleksandr Muga <aleksandr.muga@south.rt.ru>
+Description: Floating keyboard layout flag near the cursor
+ Shows current keyboard layout (RU/EN) as a flag next to the cursor.
+ Click to switch language, drag to move, scroll to resize. Tray icon with
+ "Follow cursor" and "Quit" actions. Requires X11.

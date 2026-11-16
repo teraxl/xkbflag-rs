@@ -1,0 +1,15 @@
+[Desktop Entry]
+Name=xkbflag
+Name[ru_RU]=xkbflag
+GenericName=Keyboard layout flag
+GenericName[ru_RU]=Флаг раскладки клавиатуры
+Comment=Floating keyboard layout flag near the cursor
+Comment[ru_RU]=Плавающий флаг раскладки клавиатуры у курсора
+Categories=Utility;
+Exec=/usr/bin/xkbflag-rs
+Icon=input-keyboard
+Keywords=keyboard;layout;language;flag;
+Keywords[ru_RU]=клавиатура;раскладка;язык;флаг;
+TryExec=/usr/bin/xkbflag-rs
+Type=Application
+Terminal=false

@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 description = "Плавающий флаг раскладки клавиатуры у курсора (KDE/X11)"
 license = "MIT"
-authors = ["Muga Aleksandr <sasha_muga@mail.ru>"]
-repository = "https://github.com/teraxl/kbdflag"
+authors = ["Aleksandr Muga <aleksandr.muga@south.rt.ru>"]
+repository = "https://github.com/<user>/xkbflag-rs"
 
 [dependencies]
 eframe = "0.28"
@@ -19,3 +19,11 @@ tiny-skia = "0.11"
 
 [build-dependencies]
 cc = "1"
+
+[profile.lto]
+inherits = "release"
+lto = "fat"
+codegen-units = 1
+opt-level = "z"
+panic = "abort"
+strip = true

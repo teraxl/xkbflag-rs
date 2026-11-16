@@ -4582,7 +4582,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "xkbflag"
+name = "xkbflag-rs"
 version = "0.1.0"
 dependencies = [
  "cc",

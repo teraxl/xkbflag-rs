@@ -528,7 +528,7 @@ fn main() {
     let (tx, rx): (Sender<()>, Receiver<()>) = unbounded();
     let initial_lang = Lang::from_system().unwrap_or(Lang::En);
     let lang = Arc::new(Mutex::new(initial_lang));
-    let follow_cursor = Arc::new(AtomicBool::new(false));
+    let follow_cursor = Arc::new(AtomicBool::new(true));
     let ctrl_held = Arc::new(AtomicBool::new(false));
 
     let lang_sync = Arc::clone(&lang);

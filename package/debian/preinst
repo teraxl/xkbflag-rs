@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+if pgrep -x xkbflag-rs >/dev/null 2>&1; then
+    pkill xkbflag-rs 2>/dev/null || true
+    sleep 1
+fi
+
+exit 0

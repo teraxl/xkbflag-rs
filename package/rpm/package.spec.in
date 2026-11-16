@@ -1,0 +1,72 @@
+%define __prelink_undo_cmd     %{nil}
+%define _unpackaged_files_terminate_build 0
+%define _build_id_links none
+
+Name:           xkbflag-rs
+Version:        {{version}}
+Release:        {{release}}
+Summary:        Floating keyboard layout flag near the cursor
+
+License:        MIT
+URL:            https://github.com/teraxl/xkbflag-rs
+BuildArch:      {{arch}}
+Group:          Graphical desktop/Other
+
+Requires:       glibc >= 2.32
+Requires:       libX11
+Requires:       libxcb
+Requires:       libXext
+Requires:       libXtst
+Requires:       libdbus
+
+%description
+Floating keyboard layout flag (RU/EN) next to the cursor. Click to switch
+language, drag to move, scroll to resize. Lives in the system tray.
+Works on X11 with a StatusNotifierItem-compatible tray.
+
+%prep
+# No prep needed, files are already in BUILDROOT
+
+%build
+# No build needed, binaries are pre-built
+
+%install
+cp -a $RPM_BUILDROOT %{buildroot}
+
+%files
+/usr/bin/xkbflag-rs
+/usr/share/applications/xkbflag-rs.desktop
+
+%pre
+if pgrep -x xkbflag-rs >/dev/null 2>&1; then
+    pkill xkbflag-rs 2>/dev/null || true
+    sleep 1
+fi
+exit 0
+
+%post
+# Автозапуск в KDE/GNOME — через ~/.config/autostart, не системный сервис.
+# Опционально: раскомментируйте, если нужен systemd user unit.
+# systemctl --user daemon-reload 2>/dev/null || true
+exit 0
+
+%preun
+case "$1" in
+    0)
+        pkill xkbflag-rs 2>/dev/null || true
+        ;;
+esac
+exit 0
+
+%postun
+case "$1" in
+    0)
+        rm -f /etc/xdg/autostart/xkbflag-rs.desktop 2>/dev/null || true
+        ;;
+esac
+exit 0
+
+%changelog
+* Mon Nov 16 2026 Aleksandr Muga <aleksandr.muga@south.rt.ru> v0.1.0-alt1
+- Initial release: floating keyboard layout flag (RU/EN) with tray icon,
+  click-to-switch, drag, resize, follow-cursor mode
