@@ -2030,21 +2030,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "langflag"
-version = "0.1.0"
-dependencies = [
- "cc",
- "crossbeam-channel",
- "eframe",
- "egui",
- "ksni",
- "raw-window-handle 0.6.2",
- "rdev",
- "resvg",
- "tiny-skia",
-]
-
-[[package]]
 name = "lazy_static"
 version = "1.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4594,6 +4579,21 @@ dependencies = [
  "log",
  "once_cell",
  "xkeysym",
+]
+
+[[package]]
+name = "xkbflag"
+version = "0.1.0"
+dependencies = [
+ "cc",
+ "crossbeam-channel",
+ "eframe",
+ "egui",
+ "ksni",
+ "raw-window-handle 0.6.2",
+ "rdev",
+ "resvg",
+ "tiny-skia",
 ]
 
 [[package]]

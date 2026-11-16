@@ -1,7 +1,11 @@
 [package]
-name = "langflag"
+name = "xkbflag"
 version = "0.1.0"
 edition = "2021"
+description = "Плавающий флаг раскладки клавиатуры у курсора (KDE/X11)"
+license = "MIT"
+authors = ["Muga Aleksandr <sasha_muga@mail.ru>"]
+repository = "https://github.com/teraxl/kbdflag"
 
 [dependencies]
 eframe = "0.28"
