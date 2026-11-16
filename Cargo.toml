@@ -2,7 +2,7 @@
 name = "xkbflag-rs"
 version = "0.1.0"
 edition = "2021"
-description = "Плавающий флаг раскладки клавиатуры у курсора (KDE/X11)"
+description = "Floating keyboard layout flag near the cursor (X11 / Windows)"
 license = "MIT"
 authors = ["Aleksandr Muga <aleksandr.muga@south.rt.ru>"]
 repository = "https://github.com/<user>/xkbflag-rs"
@@ -12,12 +12,26 @@ eframe = "0.28"
 egui = "0.28"
 rdev = "0.5"
 crossbeam-channel = "0.5"
-ksni = "0.2"
 raw-window-handle = "0.6"
 resvg = "0.42"
 tiny-skia = "0.11"
 
-[build-dependencies]
+[target.'cfg(target_os = "linux")'.dependencies]
+ksni = "0.2"
+
+[target.'cfg(windows)'.dependencies]
+tray-icon = "0.14"
+windows = { version = "0.58", features = [
+    "Win32_Foundation",
+    "Win32_Security",
+    "Win32_System_Com",
+    "Win32_System_Threading",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_Graphics_Gdi",
+] }
+
+[target.'cfg(target_os = "linux")'.build-dependencies]
 cc = "1"
 
 [profile.lto]

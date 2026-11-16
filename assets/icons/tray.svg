@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Внешняя рамка (сквиркл) -->
+  <path d="M 160 32 L 352 32 C 445 32 480 67 480 160 L 480 352 C 480 445 445 480 352 480 L 160 480 C 67 480 32 445 32 352 L 32 160 C 32 67 67 32 160 32 Z" 
+        fill="none" stroke="#a0a0a0" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Кабель -->
+  <path d="M 256 184 C 256 150 285 150 320 150 L 375 150 C 405 150 405 112 375 112 L 200 112 C 170 112 165 102 165 86" 
+        fill="none" stroke="#a0a0a0" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Корпус клавиатуры -->
+  <rect x="88" y="184" width="336" height="196" rx="36" ry="36" 
+        fill="none" stroke="#a0a0a0" stroke-width="14" stroke-linejoin="round"/>
+
+  <!-- Клавиши -->
+  <g fill="#a0a0a0">
+    <rect x="122" y="218" width="22" height="11" rx="5.5"/>
+    <rect x="158" y="218" width="22" height="11" rx="5.5"/>
+    <rect x="194" y="218" width="22" height="11" rx="5.5"/>
+    <rect x="230" y="218" width="22" height="11" rx="5.5"/>
+    <rect x="266" y="218" width="22" height="11" rx="5.5"/>
+    <rect x="302" y="218" width="22" height="11" rx="5.5"/>
+    <rect x="338" y="218" width="22" height="11" rx="5.5"/>
+    <rect x="374" y="218" width="22" height="11" rx="5.5"/>
+
+    <rect x="122" y="248" width="22" height="11" rx="5.5"/>
+    <rect x="158" y="248" width="22" height="11" rx="5.5"/>
+    <rect x="194" y="248" width="22" height="11" rx="5.5"/>
+    <rect x="230" y="248" width="22" height="11" rx="5.5"/>
+    <rect x="266" y="248" width="22" height="11" rx="5.5"/>
+    <rect x="302" y="248" width="22" height="11" rx="5.5"/>
+    <rect x="338" y="248" width="22" height="11" rx="5.5"/>
+    <rect x="374" y="248" width="22" height="11" rx="5.5"/>
+
+    <rect x="122" y="278" width="22" height="11" rx="5.5"/>
+    <rect x="158" y="278" width="22" height="11" rx="5.5"/>
+    <rect x="194" y="278" width="22" height="11" rx="5.5"/>
+    <rect x="230" y="278" width="22" height="11" rx="5.5"/>
+    <rect x="266" y="278" width="22" height="11" rx="5.5"/>
+    <rect x="302" y="278" width="22" height="11" rx="5.5"/>
+    <rect x="338" y="278" width="22" height="11" rx="5.5"/>
+    <rect x="374" y="278" width="22" height="11" rx="5.5"/>
+
+    <rect x="122" y="308" width="22" height="11" rx="5.5"/>
+    <rect x="158" y="308" width="22" height="11" rx="5.5"/>
+    <rect x="194" y="308" width="22" height="11" rx="5.5"/>
+    <rect x="230" y="308" width="22" height="11" rx="5.5"/>
+    <rect x="266" y="308" width="22" height="11" rx="5.5"/>
+    <rect x="302" y="308" width="22" height="11" rx="5.5"/>
+    <rect x="338" y="308" width="22" height="11" rx="5.5"/>
+    <rect x="374" y="308" width="22" height="11" rx="5.5"/>
+
+    <rect x="156" y="340" width="200" height="11" rx="5.5"/>
+  </g>
+</svg>
