@@ -46,4 +46,4 @@ MIT License
 
 Aleksandr Muga sasha_muga@mail.ru
 
-# Made with ❤ and Rust
+Made with ❤️ and Rust
