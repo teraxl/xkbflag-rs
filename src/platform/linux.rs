@@ -3,7 +3,7 @@ use crate::platform::TrayCallbacks;
 use eframe::egui;
 use std::ffi::CString;
 use std::os::raw::{c_char, c_int, c_long, c_uchar, c_uint, c_ulong, c_void};
-use std::sync::{Arc, Mutex};
+use std::sync::Arc;
 
 #[repr(C)]
 #[derive(Clone, Copy, Default)]
@@ -74,6 +74,9 @@ extern "C" {
         mask: *mut c_uint,
     ) -> c_int;
     fn XDefaultRootWindow(dpy: *mut c_void) -> c_ulong;
+    fn XDefaultScreen(dpy: *mut c_void) -> c_int;
+    fn XDisplayWidth(dpy: *mut c_void, screen: c_int) -> c_int;
+    fn XDisplayHeight(dpy: *mut c_void, screen: c_int) -> c_int;
     fn XInternAtom(dpy: *mut c_void, atom_name: *const c_char, only_if_exists: c_int) -> c_ulong;
     fn XChangeProperty(
         dpy: *mut c_void,

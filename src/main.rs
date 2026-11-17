@@ -62,6 +62,7 @@ struct App {
     win_id: Option<u64>,
     configured: bool,
     dragging: bool,
+    #[allow(dead_code)]
     drag_off: egui::Vec2,
     tex_ru: egui::TextureHandle,
     tex_us: egui::TextureHandle,
