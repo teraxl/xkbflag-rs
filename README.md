@@ -36,11 +36,14 @@ winget install Rustlang.Rustup
 
 # Соберите проект
 cargo build --release
+```
 
-Лицензия
+## Лицензия
+
 MIT License
 
-Автор
+## Автор
+
 Aleksandr Muga sasha_muga@mail.ru
 
-Made with ❤ and Rust
+# Made with ❤ and Rust
